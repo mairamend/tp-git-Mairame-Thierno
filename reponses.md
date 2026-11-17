@@ -1,49 +1,4 @@
-Q1: L'o
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-ption globale enregistre la configuration dans le fichier ~/.gitconfig.La differences c'est que les configurations ne concernerons que le depot ou on l'a enregistrer 
+Q1: L'option globale enregistre la configuration dans le fichier ~/.gitconfig.La differences c'est que les configurations ne concernerons que le depot ou on l'a enregistrer 
 Q2: Si l'email ne correspond à celui de github , gthub ne compte pas ta contribution 
 Q3: Le dossier .git contient tout l'historique et la configuration du depot 
 Q4: git diff donne les modifications non indexés alors que git diff --staged donne qui seront déjà indexés et qui seront dans le prochain commit
@@ -60,4 +15,9 @@ Q11: Ce sont les marqueurs de conflit que Git insère dans un fichier quand il n
 ======= : séparateur entre les deux versions.
 >>>>>>> titre : fin du conflit. Ce qui précède est la version de la branche qu'on fusionnes (titre).
 Une modification
-
+Q12: origin est le nom par défaut du dépôt distant (le depot GitHub : ). 
+L’option -u  lie la branche locale à la branche distante :
+Q13:git fetch : télécharge les nouveaux commits depuis GitHub (il met à jour origin/main) mais ne touche pas aux fichiers ni à la branche locale. 
+git pull : c’est git fetch + git merge (ou rebase). Il télécharge et intègre directement les changements dans la branche locale.
+Q14:Parce que le dépôt distant contenait des commits que je n’avais pas en local (modifiés depuis /tmp/poste2).L'historique local et celui de GitHub avaient divergé, et Git refuse d’écraser le travail distant. Le message typique est rejected ... (fetch first) ou non-fast-forward.
+La bonne habitude : faire un git pull avant de pousser (et idéalement avant de commencer à travailler) :
